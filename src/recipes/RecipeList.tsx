@@ -16,7 +16,6 @@ export default function RecipeList() {
     getRecipes(category)
     .then((res) => setRecipes(res))
     .catch(() => setError("Error fetching recipes, is the server running?"));
-
   }, [category]);
 
   const recipeListItems = recipes.map((recipe) => {
